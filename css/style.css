@@ -1,0 +1,374 @@
+@font-face {
+  font-family: "Montserrat";
+  src:  url(../fonts/Montserrat-Light.woff2) format(woff2),
+        url(../fonts/Montserrat-Light.woff) format(woff),
+        url(../fonts/Montserrat-Light.ttf) format(truetype);
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:  url(../fonts/Montserrat-Regular.woff2) format(woff2),
+        url(../fonts/Montserrat-Regular.woff) format(woff),
+        url(../fonts//Montserrat-Regular.ttf) format(truetype);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:  url(../fonts/Montserrat-Medium.woff2) format(woff2),
+        url(../fonts/Montserrat-Medium.woff) format(woff),
+        url(../fonts/Montserrat-Medium.ttf) format(truetype);
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:  url(../fonts/Montserrat-SemiBold.woff2) format(woff2),
+        url(../fonts/Montserrat-SemiBold.woff) format(woff),
+        url(../fonts/Montserrat-SemiBold.ttf) format(truetype);
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:  url(../fonts/Montserrat-Bold.woff2) format(woff2),
+        url(../fonts/Montserrat-Bold.woff) format(woff),
+        url(../fonts/Montserrat-Bold.ttf) format(truetype);
+  font-style: normal;
+  font-weight: 700;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+html {
+  font: 400 62.5%/1.2 "Montserrat", Arial, sans-serif;
+}
+
+.container {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 15px 0 15px;
+}
+
+/* Header
+================================= */
+.header {
+  padding: 17px 0 27px 0;
+}
+
+.header__panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  max-width: 600px;
+  width: 100%;
+}
+
+.navbar__list {
+  display: flex;
+  justify-content: space-between;  
+}
+
+.navbar__link {
+  font-size: 1.4rem;
+  color: #333;
+  transition: .3s all;
+}
+
+.navbar__link:hover {
+  transform: scale(1.2)
+}
+
+.info {
+  align-self: end;
+}
+
+.info__text {
+  margin-bottom: 13px;
+  font-size: 2.4rem;
+  text-align: right;
+  color: #333;
+}
+
+.info__tel {
+  font-size: 4rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Main Slider
+================================= */
+.main-slider__img {
+  position: relative;
+  margin: 40px 0 80px 0;
+  user-select: none;
+}
+
+.main__img {
+  margin: 0 auto;
+  width: 100%;
+  transition: .3s all;
+}
+
+.main__request {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 13%;
+  left: 4%;
+  padding-left: 1.3%;
+  max-width: 40.3%;
+  max-height: 79%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/slider/eclipse.png);
+  background-repeat: no-repeat;
+  background-position: right 0;
+  background-size: 43.7% 59.5%;
+  border-radius: 7%;
+  background-color: #77ceff;
+  transition: .2s all;
+}
+
+.request_active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.main__date,
+.main__text,
+.main__title {
+  color: #333;
+}
+
+.main__date {
+  margin: 3% 0 9% 0;
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+.main__text {
+  margin-bottom: 9%;
+  font-size: 1.4vw;
+  font-weight: 500;
+}
+
+.main__title {
+  font-size: 2.1vw;
+  font-weight: 600;
+}
+
+.form {
+  position: absolute;
+  top: 19%;
+  left: calc(50% - (78.8% / 2));
+  max-width: 78.8%;
+  width: 78.8%;
+  max-height: 14.2%;
+  height: 14.2%;
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 4%;
+  padding-left: 8%;
+  border-radius: 5em;
+  border: none;
+  font-size: 1.1vw;
+  color: #333;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  font-size: 1.1vw;
+  color: #D9D9D9;
+}
+
+input:last-child {
+  margin-bottom: 0;
+}
+
+.main__submit {
+  position: absolute;
+  left: 3%;
+  bottom: 7%;
+  width: 37%;
+  max-height: 11.7%;
+  height: 11.7%;
+  padding-left: 2%;
+  border-radius: 2em;
+  border: none;
+  font-size: .8vw;
+  text-align: left;
+  background-color: #fff;
+  transition: .3s background-color, .3s color;
+  cursor: pointer;
+}
+
+.main__submit::after {
+  content: '';
+  position: absolute;
+  top: 41%;
+  right: 14%;
+  width: 20%;
+  height: 20%;
+  background: url(../images/slider/arrow.png); 
+  background-repeat: no-repeat;
+  background-position: right 0;
+  background-size: 100% 100%;
+  transition: .3s all;
+}
+
+.main__submit:hover {
+  background-color: #924DEB;
+  color: #fff; 
+}
+
+.main__submit:hover::after {
+  right: 7%;
+  background: url(../images/slider/arrow-2.png);
+}
+
+.main__answer {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+}
+
+.answer__text {
+  font-size: 1.9vw;
+  font-weight: 500;
+  text-align: center;
+}
+
+.answer__text:first-child {
+  margin-bottom: 10%;
+}
+
+.main__pagination {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 3.2%);
+  width: 10%;
+  height: 7%;
+}
+
+.pagination_active {
+  background-color: #fff;
+}
+
+.main__pagination span {
+  display: inline-block;
+  margin-right: 5%;
+  width: 7%;
+  height: 28.6%;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #050505;
+  cursor: pointer;
+}
+
+.main__pagination span:last-child {
+  margin-right: 0%;
+}
+
+.main__price {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 11%;
+  right: 23%;
+  max-width: 12.7%;
+  min-height: 36.5%;
+  width: 100%;
+  transform: rotate(17.3deg);
+  border-radius: 50%;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  background-color: #ff0000;
+  box-shadow: 6px 2px 10px rgba(0, 0, 0, .5);
+} 
+
+.price_active {
+  display: flex;
+} 
+
+.main__price-2 {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 24%;
+  right: 7.1%;
+  max-width: 12.7%;
+  min-height: 36.5%;
+  width: 100%;
+  transform: rotate(17.3deg);
+  border-radius: 50%;
+  font-weight: 400;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 6px 2px 10px rgba(0, 0, 0, .5);
+}
+
+.price_active {
+  display: flex;
+}
+
+.main__price div:first-child {
+  font-size: 1.6vw;
+}
+
+.main__price div:nth-child(2) {
+  font-size: 2.8vw;
+}
+
+.main__price div:last-child {
+  font-size: 1.4vw;
+}
+
+.main__price-2 div:first-child {
+  font-size: 2.8vw;
+  color: #FF5454;
+}
+
+.main__price-2 div:last-child {
+  font-size: 1.4vw;
+  color: #333;
+}
+
+/* Types of Creativity
+================================= */
