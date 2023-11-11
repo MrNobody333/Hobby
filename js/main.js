@@ -19,6 +19,7 @@ function changeBanner() {
   mainRequest[1].classList.add('request_active');
   mainRequest[1].style.backgroundImage = 'none';
   mainRequest[1].style.padding = '0';
+  delayInterval();
 }
 
 /* Validate Form
@@ -111,7 +112,11 @@ function rollInterval() {
 
 function delayInterval() {
   clearInterval(timerId);
-  timerId = setInterval(rollInterval, 5000);
+  
+  if (mainRequest[1].classList.contains('request_active')) {
+    clearInterval(timerId);
+  } else {
+    timerId = setInterval(rollInterval, 2000);
+  }
 }
-
-timerId = setInterval(rollInterval, 5000);
+delayInterval();

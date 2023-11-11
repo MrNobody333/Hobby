@@ -105,11 +105,6 @@ html {
   transform: scale(1.2);
 }
 
-.link_active {
-  transform: scale(1.2);
-  font-weight: 600;
-}
-
 .info {
   align-self: end;
 }
