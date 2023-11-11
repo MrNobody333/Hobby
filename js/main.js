@@ -84,6 +84,13 @@ let pagination = document.querySelectorAll('.btn');
 let currentIndex = 0;
 let timerId = null;
 
+window.addEventListener('resize', init);
+
+function init() {
+  mainSlider.style.transform = `translateX(-${currentIndex * sliderImg[0].offsetWidth}px)`;
+}
+init();
+
 pagination.forEach((el, index, arr) => {
   el.addEventListener('click', () => {
     rollSlide(el, index, arr);
@@ -112,11 +119,11 @@ function rollInterval() {
 
 function delayInterval() {
   clearInterval(timerId);
-  
+
   if (mainRequest[1].classList.contains('request_active')) {
     clearInterval(timerId);
   } else {
-    timerId = setInterval(rollInterval, 2000);
+    timerId = setInterval(rollInterval, 5000);
   }
 }
 delayInterval();
