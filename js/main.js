@@ -1,12 +1,9 @@
+/* Change Banner
+================================= */
 const mainRequest = document.querySelectorAll('.main__request');
 const mainSubmit = [...document.querySelectorAll('.main__submit')];
-const form = document.forms;
-
-form[0][0].addEventListener('blur', ()=> validateName(form[0][0]));
-form[0][1].addEventListener('blur', ()=> validatePhone(form[0][1]));
 
 mainSubmit[0].addEventListener('click', changeBanner);
-mainSubmit[1].addEventListener('click', sendARequest);
 
 function changeBanner() {
   const mainImg = document.querySelector('.main__img');
@@ -23,6 +20,14 @@ function changeBanner() {
   mainRequest[1].style.backgroundImage = 'none';
   mainRequest[1].style.padding = '0';
 }
+
+/* Validate Form
+================================= */
+const form = document.forms;
+
+form[0][0].addEventListener('blur', ()=> validateName(form[0][0]));
+form[0][1].addEventListener('blur', ()=> validatePhone(form[0][1]));
+mainSubmit[1].addEventListener('click', sendARequest);
 
 function validateName(name) {
   if (name?.classList?.contains('name')) {
@@ -69,3 +74,44 @@ function showNotification() {
   mainRequest[2].style.backgroundImage = 'none';
   mainRequest[2].style.padding = '0';
 }
+
+/* Main Slider
+================================= */
+let mainSlider = document.querySelector('.main-slider');
+let sliderImg = document.querySelectorAll('.main-slider__img');
+let pagination = document.querySelectorAll('.btn');
+let currentIndex = 0;
+let timerId = null;
+
+pagination.forEach((el, index, arr) => {
+  el.addEventListener('click', () => {
+    rollSlide(el, index, arr);
+    delayInterval();
+})});
+    
+function rollSlide(btn, index, arr) {
+  arr[currentIndex].classList.remove('btn_active');
+  btn.classList.add('btn_active');
+  currentIndex = index;
+  mainSlider.style.transform = `translateX(-${currentIndex * sliderImg[0].offsetWidth}px)`;
+}
+
+function rollInterval() {
+  if (currentIndex < sliderImg.length - 1) {
+    pagination[currentIndex].classList.remove('btn_active');
+    currentIndex++;
+    pagination[currentIndex].classList.add('btn_active');
+  } else {
+    pagination[currentIndex].classList.remove('btn_active');
+    currentIndex = 0;
+    pagination[currentIndex].classList.add('btn_active');
+  }
+  mainSlider.style.transform = `translateX(-${currentIndex * sliderImg[0].offsetWidth}px)`;
+}
+
+function delayInterval() {
+  clearInterval(timerId);
+  timerId = setInterval(rollInterval, 5000);
+}
+
+timerId = setInterval(rollInterval, 5000);

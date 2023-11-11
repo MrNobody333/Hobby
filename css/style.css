@@ -76,6 +76,7 @@ html {
 ================================= */
 .header {
   padding: 17px 0 27px 0;
+  margin-bottom: 40px;
 }
 
 .header__panel {
@@ -101,7 +102,12 @@ html {
 }
 
 .navbar__link:hover {
-  transform: scale(1.2)
+  transform: scale(1.2);
+}
+
+.link_active {
+  transform: scale(1.2);
+  font-weight: 600;
 }
 
 .info {
@@ -123,9 +129,22 @@ html {
 
 /* Main Slider
 ================================= */
-.main-slider__img {
+.main-container {
+  overflow: hidden;
   position: relative;
-  margin: 40px 0 80px 0;
+}
+
+.main-slider {
+  display: flex;
+  position: relative;
+  transition: .4s ease-in-out;
+}
+
+.main-slider__img {
+  flex-shrink: 0;
+  position: relative;
+  max-width: 1440px;
+  width: 100%;
   user-select: none;
 }
 
@@ -278,21 +297,22 @@ input:last-child {
 
 .main__pagination {
   position: absolute;
-  bottom: 0;
-  left: calc(50% - 3.2%);
-  width: 10%;
-  height: 7%;
+  bottom: -1.6%;
+  left: 46.9%;
+  width: 12.7%;
+  height: 9%;
+  user-select: none;
 }
 
-.pagination_active {
+.btn_active {
   background-color: #fff;
 }
 
 .main__pagination span {
   display: inline-block;
-  margin-right: 5%;
-  width: 7%;
-  height: 28.6%;
+  margin-right: 4%;
+  width: 5.5%;
+  height: 22.5%;
   border: 1px solid #fff;
   border-radius: 50%;
   color: #050505;
