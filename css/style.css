@@ -191,18 +191,18 @@ html {
 
 .main__date {
   margin: 3% 0 9% 0;
-  font-size: 2vw;
+  font-size: 3.6rem;
   font-weight: 500;
 }
 
 .main__text {
   margin-bottom: 9%;
-  font-size: 1.4vw;
+  font-size: 2.4rem;
   font-weight: 500;
 }
 
 .main__title {
-  font-size: 2.1vw;
+  font-size: 4rem;
   font-weight: 600;
 }
 
@@ -224,7 +224,7 @@ input {
   padding-left: 8%;
   border-radius: 5em;
   border: none;
-  font-size: 1.1vw;
+  font-size: 2rem;
   color: #333;
 }
 
@@ -233,7 +233,7 @@ input:focus {
 }
 
 input::placeholder {
-  font-size: 1.1vw;
+  font-size: 2rem;
   color: #D9D9D9;
 }
 
@@ -251,7 +251,7 @@ input:last-child {
   padding-left: 2%;
   border-radius: 2em;
   border: none;
-  font-size: .8vw;
+  font-size: 1.6rem;
   text-align: left;
   background-color: #fff;
   transition: .3s background-color, .3s color;
@@ -290,7 +290,7 @@ input:last-child {
 }
 
 .answer__text {
-  font-size: 1.9vw;
+  font-size: 3.6rem;
   font-weight: 500;
   text-align: center;
 }
@@ -373,31 +373,31 @@ input:last-child {
 }
 
 .main__price div:first-child {
-  font-size: 1.6vw;
+  font-size: 2.8rem;
 }
 
 .main__price div:nth-child(2) {
-  font-size: 2.8vw;
+  font-size: 4.8rem;
 }
 
 .main__price div:last-child {
-  font-size: 1.4vw;
+  font-size: 2.4rem;
 }
 
 .main__price-2 div:first-child {
-  font-size: 2.8vw;
+  font-size: 4.8rem;
   color: #FF5454;
 }
 
 .main__price-2 div:last-child {
-  font-size: 1.4vw;
+  font-size: 2.8rem;
   color: #333;
 }
 
 /* Types of Creativity
 ================================= */
 .creativity {
-  margin-bottom: 164px;
+  margin-bottom: 100px;
 }
 
 .creativity__title {
@@ -417,10 +417,10 @@ input:last-child {
 
 .creativity__item {
   position: relative;
+  max-width: 463px;
 }
 
 .creativity__img {
-  max-width: 463px;
   width: 100%;
 }
 
@@ -448,4 +448,74 @@ input:last-child {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Knitting Block
+================================= */
+
+/* Studio my Hobby
+================================= */
+.my-hobby {
+  margin-bottom: 80px;
+}
+
+.my-hobby__inner {
+  display: flex;
+  gap: 3.4%;
+}
+
+.my-hobby__img {
+  flex-basis: 100%;
+  flex-shrink: 1;
+  max-width: 752px;
+}
+
+.my-hobby__img img {
+  width: 100%;
+}
+
+.my-hobby__description {
+  flex-shrink: 2;
+}
+
+.description__title {
+  margin-bottom: 1.5%;
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.founder {
+  margin-bottom: 14%;
+  font-size: 1.6rem;
+}
+
+.description__text {
+  margin-bottom: 3%;
+  font-size: 1.6rem;
+}
+
+.description__text:nth-of-type(4) {
+  margin-bottom: 7%;
+}
+
+.description__text:last-child {
+  margin-bottom: 0;
+}
+
+/* How our classes work
+================================= */
+.our-classes {
+  margin-bottom: 80px;
+}
+
+.our-classes__title {
+  margin-bottom: 60px;
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+.our-classes__photo {
+  display: grid;
+  grid-template-columns: 672px 370px 348px;
+  grid-template-rows: 672px 745px;
 }
