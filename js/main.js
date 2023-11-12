@@ -10,7 +10,7 @@ function changeBanner() {
   const price = document.querySelector('.main__price');
   const price2 = document.querySelector('.main__price-2');
 
-  mainSubmit[1].style.left = 'calc(50% - (37% / 2))';
+  mainSubmit[1].style.left = 'calc(50% - (42.3% / 2))';
   mainSubmit[1].style.bottom = '21%';
   price.classList.remove('price_active');
   mainImg.setAttribute('src', 'images/slider/banner-2.png');
