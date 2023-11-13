@@ -568,8 +568,8 @@ html {
   height: 19.14vw;
   margin-bottom: 80px;
   border-radius: 4em;
-  background: url(/images/minor-request/eclipse-1.png) no-repeat top 0 left -5% / 22%,
-    #77ceff url(/images/minor-request/eclipse-2.png) no-repeat top 0 right -6% / 22%;
+  background: url(../images/minor-request/eclipse-1.png) no-repeat top 0 left -5% / 22%,
+    #77ceff url(../images/minor-request/eclipse-2.png) no-repeat top 0 right -6% / 22%;
 }
 
 .minor__question {
