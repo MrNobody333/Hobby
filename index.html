@@ -45,9 +45,9 @@
                 <button class="main__submit" type="button">Оставить заявку</button>
               </div>
               <div class="main__request">
-                <form class="form" action="/" method="POST">
-                  <input class="name" type="text" name="name" placeholder="Имя">
-                  <input class="phone" type="tel" name="phone" placeholder="Телефон">
+                <form class="main__form" action="/" method="POST">
+                  <input class="main__input name" type="text" name="name" placeholder="Имя">
+                  <input class="main__input phone" type="tel" name="phone" placeholder="Телефон">
                 </form>
                 <button class="main__submit" type="button">Задать вопрос</button>
               </div>
@@ -70,19 +70,19 @@
                   <div>рублей</div>
                 </div>
               </div>
-              <img class="main__img" src="images/slider/banner.png" alt="banner">
+              <img class="main__img" src="/images/slider/banner.png" alt="banner">
             </div>
             <div class="main-slider__img">
-              <img class="main__img" src="images/slider/banner-2.png" alt="banner">
+              <img class="main__img" src="/images/slider/banner-2.png" alt="banner">
             </div>
             <div class="main-slider__img">
-              <img class="main__img" src="images/slider/banner-2.png" alt="banner">
+              <img class="main__img" src="/images/slider/banner-2.png" alt="banner">
             </div>
             <div class="main-slider__img">
-              <img class="main__img" src="images/slider/banner-2.png" alt="banner">
+              <img class="main__img" src="/images/slider/banner-2.png" alt="banner">
             </div>
             <div class="main-slider__img">
-              <img class="main__img" src="images/slider/banner-2.png" alt="banner">
+              <img class="main__img" src="/images/slider/banner-2.png" alt="banner">
             </div>
           </div>
           <div class="main__pagination">
@@ -149,15 +149,44 @@
       <div class="our-classes">
         <div class="container">
           <h2 class="our-classes__title">Как проходят наши занятия</h2>
-          <div class="our-classes__photo">
-            <img src="/images/our-classes/img-1.png" alt="">
-            <img src="/images/our-classes/img-2.png" alt="">
-            <img src="/images/our-classes/img-3.png" alt="">
-            <img src="/images/our-classes/img-4.png" alt="">
-            <img src="/images/our-classes/img-5.png" alt="">
+          <div class="our-classes__wrapper">
+            <div class="our-classes__photo">
+              <div class="classes__item">
+                <img class="classes__photo-1" src="/images/our-classes/img-1.png" alt="">
+              </div>
+              <div class="classes__item">
+                <img class="classes__photo-2" src="/images/our-classes/img-2.png" alt="">
+              </div>
+            </div>
+            <div class="our-classes__photo">
+              <div class="our-classes__wrapper-inner">
+                <div class="classes__item">
+                  <img class="classes__photo-3" src="/images/our-classes/img-3.png" alt="">
+                </div>
+                <div class="classes__item">
+                  <img class="classes__photo-4" src="/images/our-classes/img-4.png" alt="">
+                </div>
+              </div>
+              <div class="classes__item">
+                <img class="classes__photo-5" src="/images/our-classes/img-5.png" alt="">
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="container">
+        <div class="minor__request">
+          <form class="minor__form" action="/" method="POST">
+            <input class="minor__input name" type="text" name="name" placeholder="Имя">
+            <input class="minor__input phone" type="tel" name="phone" placeholder="Телефон">
+          </form>
+          <button class="minor__submit" type="button">Задать вопрос</button>
+          <div class="minor__question">Есть вопросы по мастер-классам?</div>
+        </div>
+      </div>
+     
+    
 
 
 

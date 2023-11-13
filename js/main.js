@@ -33,9 +33,9 @@ mainSubmit[1].addEventListener('click', sendARequest);
 function validateName(name) {
   if (name?.classList?.contains('name')) {
     if (!(/^[а-яА-Яa-zA-Z]+$/.test(name.value))) {
-      name.style.outline = '2px solid #ff0000';
+      name.style.boxShadow = '0 0 15px 0 #ff0000';
     } else {
-      name.style.outline = 'none';
+      name.style.boxShadow = 'none';
       return true;
     }
   }
@@ -45,9 +45,9 @@ function validateName(name) {
 function validatePhone(phone) {
   if (phone?.classList?.contains('phone')) {
     if (!(/^[0-9]+$/.test(phone.value))) {
-      phone.style.outline = '2px solid #ff0000';
+      phone.style.boxShadow = '0 0 15px 0 #ff0000';
     } else {
-      phone.style.outline = 'none';
+      phone.style.boxShadow = 'none';
       return true;
     }
   }
