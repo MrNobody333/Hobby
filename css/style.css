@@ -561,8 +561,13 @@ html {
 
 /* Minor Request
 ================================= */
-.minor__request {
+.minor__wrapper {
   position: relative;
+}
+
+.minor__request {
+  visibility: hidden;
+  opacity: 0;
   font-size: 10px;
   width: 100%;
   height: 19.14vw;
@@ -570,32 +575,45 @@ html {
   border-radius: 4em;
   background: url(../images/minor-request/eclipse-1.png) no-repeat top 0 left -5% / 22%,
     #77ceff url(../images/minor-request/eclipse-2.png) no-repeat top 0 right -6% / 22%;
+  transition: .2s all;
+}
+
+.minor__request:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.minor__request_active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .minor__question {
   position: absolute;
-  top: 29%;
-  left: 15%;
-  max-width: 36%;
+  top: 25%;
+  left: 14%;
+  max-width: 31%;
   font-size: 4rem;
+  line-height: 1.7;
 }
 
 .minor__form {
   position: absolute;
   top: 20.3%;
   left: 54%;
-  max-width: 78.8%;
-  width: 78.8%;
+  max-width: 31.75%;
+  width: 31.75%;
   max-height: 14.2%;
   height: 14.2%;
 }
 
 .minor__input {
   display: block;
-  width: 40.3%;
+  width: 100%;
   height: 100%;
-  margin-bottom: 2.8%;
-  padding-left: 3.3%;
+  margin-bottom: 6%;
+  padding-left: 8%;
   border-radius: 2em;
   border: none;
   font-size: 2rem;
@@ -617,11 +635,11 @@ html {
 
 .minor__submit {
   position: absolute;
-  right: 21%;
-  bottom: 19%;
+  right: 21.4%;
+  bottom: 19.1%;
   width: 17.05%;
-  max-height: 11.7%;
-  height: 11.7%;
+  max-height: 11.5%;
+  height: 11.5%;
   padding-left: 1.4%;
   border-radius: 2em;
   border: none;
@@ -656,10 +674,23 @@ html {
   background: url(../images/slider/arrow-2.png);
 }
 
+.minor__answer {
+  position: absolute;
+  top: 29%;
+  left: calc(50% - 36% / 2);
+  width: 36%;
+  margin: 0 auto;
+}
 
+.minor-answer__text {
+  font-size: 3.6rem;
+  font-weight: 500;
+  text-align: center;
+}
 
-
-
+.minor-answer__text:first-child {
+  margin-bottom: 9%;
+}
 
 
 
@@ -671,7 +702,7 @@ html {
 
 /* Media queries
 ================================= */
-@media screen and (min-width: 1921px) {
+@media screen and (min-width: 1920px) {
   .our-classes__wrapper {
     gap: 25px;
   }

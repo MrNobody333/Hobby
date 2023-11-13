@@ -25,10 +25,15 @@ function changeBanner() {
 /* Validate Form
 ================================= */
 const form = document.forms;
+const minorRequest = document.querySelectorAll('.minor__request');
+const minorSubmit = document.querySelector('.minor__submit');
 
 form[0][0].addEventListener('blur', ()=> validateName(form[0][0]));
 form[0][1].addEventListener('blur', ()=> validatePhone(form[0][1]));
+form[1][0].addEventListener('blur', ()=> validateName(form[1][0]));
+form[1][1].addEventListener('blur', ()=> validatePhone(form[1][1]));
 mainSubmit[1].addEventListener('click', sendARequest);
+minorSubmit.addEventListener('click', sendARequest);
 
 function validateName(name) {
   if (name?.classList?.contains('name')) {
@@ -55,7 +60,8 @@ function validatePhone(phone) {
 }
 
 function sendARequest() {
-  if (validateName(form[0][0]) && validatePhone(form[0][1])) {
+  if (validateName(form[0][0]) && validatePhone(form[0][1]) ||
+      validateName(form[1][0]) && validatePhone(form[1][1])) {
     fetch('https://eoppor86w7aowc1.m.pipedream.net', {
       method: 'POST',
       body: new FormData(form[0]),
@@ -74,6 +80,8 @@ function showNotification() {
   mainRequest[2].classList.add('request_active');
   mainRequest[2].style.backgroundImage = 'none';
   mainRequest[2].style.padding = '0';
+  minorRequest[0].classList.remove('minor__request_active');
+  minorRequest[1].classList.add('minor__request_active');
 }
 
 /* Main Slider

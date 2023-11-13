@@ -176,15 +176,24 @@
       </div>
 
       <div class="container">
-        <div class="minor__request">
-          <form class="minor__form" action="/" method="POST">
-            <input class="minor__input name" type="text" name="name" placeholder="Имя">
-            <input class="minor__input phone" type="tel" name="phone" placeholder="Телефон">
-          </form>
-          <button class="minor__submit" type="button">Задать вопрос</button>
-          <div class="minor__question">Есть вопросы по мастер-классам?</div>
+        <div class="minor__wrapper">
+          <div class="minor__request minor__request_active">
+            <form class="minor__form" action="/" method="POST">
+              <input class="minor__input name" type="text" name="name" placeholder="Имя">
+              <input class="minor__input phone" type="tel" name="phone" placeholder="Телефон">
+            </form>
+            <button class="minor__submit" type="button">Задать вопрос</button>
+            <div class="minor__question">Есть вопросы по мастер-классам?</div>
+          </div>
+          <div class="minor__request">
+            <div class="minor__answer">
+              <div class="minor-answer__text">Заявка отправлена!</div>
+              <div class="minor-answer__text">Мы скоро с вами свяжемся!</div>
+            </div>
+          </div>
         </div>
       </div>
+        
      
     
 
