@@ -372,24 +372,24 @@ html {
   display: flex;
 }
 
-.main__price div:first-child {
+.main__price p:first-child {
   font-size: 2.8rem;
 }
 
-.main__price div:nth-child(2) {
+.main__price p:nth-child(2) {
   font-size: 4.8rem;
 }
 
-.main__price div:last-child {
+.main__price p:last-child {
   font-size: 2.4rem;
 }
 
-.main__price-2 div:first-child {
+.main__price-2 p:first-child {
   font-size: 4.8rem;
   color: #FF5454;
 }
 
-.main__price-2 div:last-child {
+.main__price-2 p:last-child {
   font-size: 2.8rem;
   color: #333;
 }
