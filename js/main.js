@@ -135,3 +135,11 @@ function delayInterval() {
   }
 }
 delayInterval();
+
+/* Feedback Slider
+================================= */
+const prev = document.querySelector('.prev-btn');
+const next = document.querySelector('.next-btn');
+
+prev.addEventListener('click', () => console.log('prev'));
+next.addEventListener('click', () => console.log('next'));

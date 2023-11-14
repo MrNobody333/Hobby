@@ -570,7 +570,7 @@ html {
   opacity: 0;
   font-size: 10px;
   width: 100%;
-  height: 19.14vw;
+  height: 399px;
   margin-bottom: 80px;
   border-radius: 4em;
   background: url(../images/minor-request/eclipse-1.png) no-repeat top 0 left -5% / 22%,
@@ -692,13 +692,149 @@ html {
   margin-bottom: 9%;
 }
 
+/* Feedback Slider
+================================= */
+.feedback-slider {
+  margin-bottom: 80px;
+}
 
+.feedback-slider-panel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
 
+.feedback-title {
+  font-size: 3.6rem;
+  font-weight: 500;
+}
 
+.feedback-slider__button {
+  display: flex;
+  justify-content: space-between;
+  max-width: 137px;
+  width: 100%;
+}
 
+.prev-btn,
+.next-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #77CEFF;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
+.prev-btn::before,
+.next-btn::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: calc(50% - 20px / 2);
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+}
 
+.prev-btn::before {
+  content: '';
+  left: 41%;
+  border-left: 1px solid #77CEFF;
+  border-bottom: 1px solid #77CEFF;
+}
 
+.next-btn::before {
+  content: '';
+  left: 20%;
+  border-right: 1px solid #77CEFF;
+  border-top: 1px solid #77CEFF;
+}
+
+.feedback-slider__wrapper {
+  overflow: hidden;
+}
+
+.feedback-slider__track {
+  display: flex;
+  gap: 25px;
+}
+
+.feedback-slider__item {
+  flex-shrink: 0;
+  max-width: 778px;
+  width: 100%;
+  height: 401px;
+  padding: 36px 0 0 51px;
+  border: 1px solid #77CEFF;
+  border-radius: 4em;
+}
+
+.item__name {
+  margin-bottom: 17px;
+  font-size: 2.4rem;
+}
+
+.item__master-class {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.item__text {
+  width: 680px;
+  font-size: 1.6rem;
+}
+
+/* Footer
+================================= */
+.footer {
+  padding: 28px 0 10px 0;
+  background-color: #77CEFF;
+}
+
+.footer__container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer__panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.footer__info {
+  align-self: flex-end;
+  text-align: center;
+}
+
+.footer__info-text {
+  font-size: 2.4rem;
+  line-height: 2;
+}
+
+.footer__info-tel {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.footer__contacts {
+  align-self: flex-end;
+  font-size: 2.4rem;
+  font-style: normal;
+}
+
+.footer__contacts p:first-child {
+  margin-bottom: 34px;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
 
 /* Media queries
 ================================= */

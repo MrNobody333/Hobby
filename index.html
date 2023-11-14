@@ -8,9 +8,8 @@
     <title>Hobby</title>
   </head>
   <body>
-
-    <div class="header">
-      <div class="container">
+    <div class="container">
+      <div class="header">
         <div class="header__panel">
           <nav class="navbar">
             <ul class="navbar__list">
@@ -26,21 +25,19 @@
             <a href="#"><svg><use xlink:href="sprite.svg#logo"></use></svg></a>
           </div>
           <div class="info">
-            <div class="info__text">Записаться на МК:</div>
+            <p class="info__text">Записаться на МК:</p>
             <a class="info__tel" href="tel:+79526385521">&#43;7&#160;952&#160;638&#8208;55&#8208;21</a>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="main">
-      <div class="container">
+      <div class="main">
         <div class="main-container">
           <div class="main-slider">
             <div class="main-slider__img">
               <div class="main__request request_active">
-                <div class="main__date">6 апреля</div>
-                <div class="main__text">Мастер-класс:</div>
+                <p class="main__date">6 апреля</p>
+                <p class="main__text">Мастер-класс:</p>
                 <h1 class="main__title">&#8220;Носочки из<br> акрила для малышей&#8221;</h1>
                 <button class="main__submit" type="button">Оставить заявку</button>
               </div>
@@ -53,21 +50,21 @@
               </div>
               <div class="main__request">
                 <div class="main__answer">
-                  <div class="answer__text">Заявка отправлена!</div>
-                  <div class="answer__text">Мы скоро с вами свяжемся!</div>
+                  <p class="answer__text">Заявка отправлена!</p>
+                  <p class="answer__text">Мы скоро с вами свяжемся!</p>
                 </div>
               </div>
               <div class="main__price price_active">
                 <div class="main__price-item">
-                  <div>от</div>
-                  <div>1 299</div>
-                  <div>рублей</div>
+                  <p>от</p>
+                  <p>1 299</p>
+                  <p>рублей</p>
                 </div>
               </div>
               <div class="main__price-2">
                 <div class="main__price-item-2">
-                  <div>1299</div>
-                  <div>рублей</div>
+                  <p>1299</p>
+                  <p>рублей</p>
                 </div>
               </div>
               <img class="main__img" src="images/slider/banner.png" alt="banner">
@@ -93,11 +90,9 @@
             <span class="btn"></span>
           </div>
         </div>
-      </div>
-
-      <div class="creativity">
-        <div class="container">
-          <h1 class="creativity__title">Виды творчества</h1>
+     
+        <div class="creativity">
+          <h2 class="creativity__title">Виды творчества</h2>
           <div class="creativity__types">
             <div class="creativity__item">
               <img class="creativity__img" src="images/creativity/img-1.png" alt="">
@@ -125,16 +120,14 @@
             </div> 
           </div>
         </div>
-      </div>
 
-      <div class="my-hobby">
-        <div class="container">
+        <div class="my-hobby">
           <div class="my-hobby__inner">
             <div class="my-hobby__img">
               <img src="images/my-hobby/img.jpg" alt="">
             </div>
             <div class="my-hobby__description">
-              <div class="description__title">Студия &#8220;My Hobby&#8221;</div>
+              <h3 class="description__title">Студия &#8220;My Hobby&#8221;</h3>
               <p class="founder">Основатель: Ирина Болотова</p>
               <p class="description__text">Хотите освоить новый вид творчества, но не знаете какой? Шитье, вышивание или может лепка? Мы можем показать вам много направлений в разных стилях и техниках.</p> 
               <p class="description__text">Мы очень любим творчество и готовы поделиться своими знаниями с вами!</p>
@@ -144,10 +137,8 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="our-classes">
-        <div class="container">
+        <div class="our-classes">
           <h2 class="our-classes__title">Как проходят наши занятия</h2>
           <div class="our-classes__wrapper">
             <div class="our-classes__photo">
@@ -173,9 +164,7 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="container">
         <div class="minor__wrapper">
           <div class="minor__request minor__request_active">
             <form class="minor__form" action="/" method="POST">
@@ -183,31 +172,62 @@
               <input class="minor__input phone" type="tel" name="phone" placeholder="Телефон">
             </form>
             <button class="minor__submit" type="button">Задать вопрос</button>
-            <div class="minor__question">Есть вопросы по мастер-классам?</div>
+            <p class="minor__question">Есть вопросы по мастер-классам?</p>
           </div>
           <div class="minor__request">
             <div class="minor__answer">
-              <div class="minor-answer__text">Заявка отправлена!</div>
-              <div class="minor-answer__text">Мы скоро с вами свяжемся!</div>
+              <p class="minor-answer__text">Заявка отправлена!</p>
+              <p class="minor-answer__text">Мы скоро с вами свяжемся!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="feedback-slider">
+          <div class="feedback-slider-panel">
+            <h2 class="feedback-title">Отзывы о наших мастер-классах:</h2>
+            <div class="feedback-slider__button"><div class="prev-btn"></div><div class="next-btn" disabled></div></div>
+          </div>
+          <div class="feedback-slider__wrapper">
+            <div class="feedback-slider__track">
+              <div class="feedback-slider__item">
+                <p class="item__name">Марина</p>
+                <p class="item__master-class">Мастер-класс:<br>Вышивка крестом - зимний вечер</p>
+                <p class="item__text">Мне очень понравилось в кругу других сидеть и вышивать! Такая приятная и дружная атмосфера. Большое спасибо Ольге, что помогла понять как делать сложные переходы. У меня дома все никак не получалось&#10098;<br>2 часа пролетели очень быстро и интересно! Я даже и не думала, что может быть так увлекательно! Прийду к вам обязательно еще раз!</p>
+              </div>
+              <div class="feedback-slider__item">
+                <p class="item__name">Катя</p>
+                <p class="item__master-class">Мастер-класс:<br>Рисование акриловыми красками - натюрморт</p>
+                <p class="item__text">Мне предложила подруга пойти на мастер-класс по рисованию. Помню только как в дестве, чтото рисовали в школе, поле этого даже не пробовала. Но после занятия, я даже и не думала, что могу ТАК красиво нарисовать сложный натюрморт. Можно даже сказать с нуля&#10099; Большое спасибо девочкам за атмосферу, теплую компанию и приятный вечер!</p>
+              </div>
+              <div class="feedback-slider__item">
+                <p class="item__name">Валентин</p>
+                <p class="item__master-class">Мастер-класс:<br>Шитье - стринги с начесом</p>
+                <p class="item__text">Привет, народ! Я решил поделиться своим веселым приключением на мастер-классе по шитью, которое в корне изменило мое представление о комфорте. Представьте себе: я на уроке шитья, и вдруг в голове мелькнула идея – почему бы не сшить себе стринги с начесом? Так что, сосредоточившись, как настоящий модный дизайнер, я создал нечто уникальное – стринги с начесом! Да, это такой уровень мягкости, что даже облачение в облаках не сможет сравниться. Теперь я могу наслаждаться не только стилем, но и уютом на новом уровне.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-        
-     
-    
-
-
-
-
-
-
-
-
-
-
-
     </div>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__panel">
+          <div class="logo">
+            <a href="#"><svg><use xlink:href="sprite.svg#logo"></use></svg></a>
+          </div>
+          <div class="footer__info">
+            <p class="footer__info-text">Записаться на МК:</p>
+            <a class="footer__info-tel" href="tel:+79526385521">&#43;7&#160;952&#160;638&#8208;55&#8208;21</a>
+          </div>
+          <address class="footer__contacts">
+            <p>г. Екатеринбург, ул. Малышевой, 29</p>
+            <p>Открыты ежедневно с 10 до 20 часов</p>
+          </address>
+        </div>
+        <p class="copyright">&#169; 2022 Все права защищены</p>
+      </div>
+    </footer>
 
     <script src="js/main.js"></script>
   </body>
