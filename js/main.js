@@ -86,9 +86,9 @@ function showNotification() {
 
 /* Main Slider
 ================================= */
-let mainSlider = document.querySelector('.main-slider');
-let sliderImg = document.querySelectorAll('.main-slider__img');
-let pagination = document.querySelectorAll('.btn');
+const mainSlider = document.querySelector('.main-slider');
+const sliderImg = document.querySelectorAll('.main-slider__img');
+const pagination = document.querySelectorAll('.btn');
 let currentIndex = 0;
 let timerId = null;
 
@@ -138,8 +138,33 @@ delayInterval();
 
 /* Feedback Slider
 ================================= */
+const sliderTrack = document.querySelector('.feedback-slider__track');
+const slide = document.querySelectorAll('.feedback-slider__item');
 const prev = document.querySelector('.prev-btn');
 const next = document.querySelector('.next-btn');
+const slideWidth = slide[0].offsetWidth + 25;
+const lastSlideDifference = sliderTrack.offsetWidth - slideWidth + 25;
+let count = 0;
 
-prev.addEventListener('click', () => console.log('prev'));
-next.addEventListener('click', () => console.log('next'));
+prev.addEventListener('click', prevSlide);
+next.addEventListener('click', nextSlide);
+
+function nextSlide() {
+  count = count < slide.length - 1 ? count + 1 : 0;
+  moveSlide();
+  count === slide.length - 1 ? moveLastSlide() : '';
+}
+
+function prevSlide() {
+  count = count < 1 ? slide.length - 1 : count - 1;
+  moveSlide();
+  count === slide.length - 1 ? moveLastSlide() : '';
+}
+
+function moveSlide() {
+  sliderTrack.style.transform = `translateX(-${count * slideWidth}px)`;
+}
+
+function moveLastSlide() {
+  sliderTrack.style.transform = `translateX(-${count * slideWidth - lastSlideDifference}px)`;
+}

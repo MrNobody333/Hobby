@@ -758,6 +758,7 @@ html {
 .feedback-slider__track {
   display: flex;
   gap: 25px;
+  transition: .3s all ease-in-out;
 }
 
 .feedback-slider__item {
@@ -824,6 +825,7 @@ html {
   align-self: flex-end;
   font-size: 2.4rem;
   font-style: normal;
+  text-align: center;
 }
 
 .footer__contacts p:first-child {
